@@ -129,4 +129,4 @@ if __name__ == "__main__":
     output = "data/processed/aapl_with_indicators.csv"
     os.makedirs("data/processed", exist_ok=True)
     result.to_csv(output, index=False)
-    print(f"\n저장: {output}")
+    print(f"\n저장: {output}") 

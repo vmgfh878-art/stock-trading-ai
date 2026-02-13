@@ -95,4 +95,4 @@ if __name__ == "__main__":
         
         collector.save_to_csv(df)
     else:
-        print("수집 실패")
+        print("수집 실패") 

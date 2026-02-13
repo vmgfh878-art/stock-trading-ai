@@ -262,4 +262,4 @@ if __name__ == "__main__":
         print(f"\n❌ 에러 발생:")
         print(f"   {type(e).__name__}: {e}")
         import traceback
-        traceback.print_exc()
+        traceback.print_exc() 
