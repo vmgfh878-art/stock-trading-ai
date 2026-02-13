@@ -9,4 +9,4 @@ for symbol in ['AAPL', 'GOOGL', 'MSFT']:
         check=True
     )
 
-print("\n전체 Transformer 학습 완료!")
+print("\n전체 Transformer 학습 완료!") 

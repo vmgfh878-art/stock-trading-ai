@@ -234,4 +234,5 @@ if __name__ == "__main__":
     print(f"   {output[:5].squeeze().detach().numpy()}")
     
     print(f"\n모델 테스트 완료!")
-    print("="*60)
+    print("="*60) 
+ 

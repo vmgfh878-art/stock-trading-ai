@@ -330,4 +330,4 @@ if __name__ == "__main__":
                         help='종목 코드 (예: AAPL, GOOGL, MSFT)')
     args = parser.parse_args()
 
-    main(args.symbol.upper())
+    main(args.symbol.upper()) 

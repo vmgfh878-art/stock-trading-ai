@@ -19,4 +19,5 @@ if __name__ == "__main__":
 
     print("\n" + "=" * 70)
     print("전체 학습 완료: AAPL / GOOGL / MSFT")
-    print("=" * 70)
+    print("=" * 70) 
+ 

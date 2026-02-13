@@ -129,4 +129,4 @@ class StockTransformer(nn.Module):
         x = x.mean(dim=1)
 
         # (batch, 128) -> (batch, 1)
-        return self.fc(x)
+        return self.fc(x) 

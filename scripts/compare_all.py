@@ -12,4 +12,4 @@ for symbol in ['AAPL', 'GOOGL', 'MSFT']:
 print("\n전체 비교 완료!")
 print("결과 파일:")
 for symbol in ['AAPL', 'GOOGL', 'MSFT']:
-    print(f"  data/models/{symbol.lower()}_comparison.png")
+    print(f"  data/models/{symbol.lower()}_comparison.png") 

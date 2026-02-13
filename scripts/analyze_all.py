@@ -22,4 +22,4 @@ if __name__ == "__main__":
     print("다음 파일들을 확인하세요:")
     for symbol in SYMBOLS:
         print(f"  data/models/{symbol.lower()}_analysis.png")
-    print("=" * 70)
+    print("=" * 70) 
