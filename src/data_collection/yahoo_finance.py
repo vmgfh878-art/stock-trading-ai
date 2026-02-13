@@ -64,13 +64,13 @@ class YahooFinanceCollector:
         os.makedirs(os.path.dirname(filepath), exist_ok=True)
         
         df.to_csv(filepath, index=False)
-        print(f"💾 저장: {filepath}")
+        print(f"저장: {filepath}")
         return filepath
 
 
 if __name__ == "__main__":
     print("="*60)
-    print("📈 주식 데이터 수집 시작")
+    print("주식 데이터 수집 시작")
     print("="*60)
     
     symbols = ["AAPL", "MSFT", "GOOGL"]
@@ -87,7 +87,7 @@ if __name__ == "__main__":
     
     if not df.empty:
         print("\n" + "="*60)
-        print("📊 수집 결과")
+        print("수집 결과")
         print("="*60)
         print(f"총 {len(df)} 행")
         print(f"\n처음 5행:")
@@ -95,4 +95,4 @@ if __name__ == "__main__":
         
         collector.save_to_csv(df)
     else:
-        print("❌ 수집 실패")
+        print("수집 실패")

@@ -68,7 +68,7 @@ class TechnicalIndicators:
     
     def add_all(self) -> pd.DataFrame:
         """모든 지표 추가"""
-        print("📊 기술적 지표 계산 시작...")
+        print("기술적 지표 계산 시작...")
         
         self.add_moving_averages()
         print("  ✓ 이동평균")
@@ -88,7 +88,7 @@ class TechnicalIndicators:
         self.add_price_features()
         print("  ✓ 가격 파생 특징")
         
-        print(f"✅ 완료! 총 {len(self.df.columns)} 개 컬럼")
+        print(f"완료! 총 {len(self.df.columns)} 개 컬럼")
         
         return self.df
 
@@ -100,7 +100,7 @@ if __name__ == "__main__":
     # 데이터 로드
     csv_files = glob("data/raw/*.csv")
     if not csv_files:
-        print("❌ CSV 파일 없음!")
+        print("CSV 파일 없음!")
         exit(1)
     
     latest = max(csv_files, key=os.path.getctime)
@@ -113,13 +113,13 @@ if __name__ == "__main__":
     aapl = df[df['Symbol'] == 'AAPL'].copy()
     aapl = aapl.sort_values('Date').reset_index(drop=True)
     
-    print(f"\n🍎 AAPL: {aapl.shape}")
+    print(f"\nAAPL: {aapl.shape}")
     
     # 지표 추가
     ti = TechnicalIndicators(aapl)
     result = ti.add_all()
     
-    print(f"\n📊 처리 후: {result.shape}")
+    print(f"\n처리 후: {result.shape}")
     
     # 결측치
     nulls = result.isnull().sum()
@@ -129,4 +129,4 @@ if __name__ == "__main__":
     output = "data/processed/aapl_with_indicators.csv"
     os.makedirs("data/processed", exist_ok=True)
     result.to_csv(output, index=False)
-    print(f"\n💾 저장: {output}")
+    print(f"\n저장: {output}")

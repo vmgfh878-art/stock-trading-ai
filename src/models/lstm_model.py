@@ -181,7 +181,7 @@ class StockLSTM(nn.Module):
 # 모델 테스트
 if __name__ == "__main__":
     print("="*60)
-    print("🧠 LSTM 모델 테스트")
+    print(" LSTM 모델 테스트")
     print("="*60)
     
     # 하이퍼파라미터
@@ -192,7 +192,7 @@ if __name__ == "__main__":
     sequence_length = 60 # 입력 시퀀스 길이
     batch_size = 32      # 배치 크기
     
-    print(f"\n📌 모델 설정:")
+    print(f"\n 모델 설정:")
     print(f"   Input Size: {input_size}")
     print(f"   Hidden Size: {hidden_size}")
     print(f"   Num Layers: {num_layers}")
@@ -206,19 +206,19 @@ if __name__ == "__main__":
         dropout=dropout
     )
     
-    print(f"\n🏗️  모델 구조:")
+    print(f"\n  모델 구조:")
     print(model)
     
     # 파라미터 개수 계산
     total_params = sum(p.numel() for p in model.parameters())
     trainable_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
     
-    print(f"\n📊 파라미터:")
+    print(f"\n파라미터:")
     print(f"   전체: {total_params:,}")
     print(f"   학습 가능: {trainable_params:,}")
     
     # 더미 데이터로 테스트
-    print(f"\n🧪 순전파 테스트:")
+    print(f"\n 순전파 테스트:")
     dummy_input = torch.randn(batch_size, sequence_length, input_size)
     print(f"   입력 shape: {dummy_input.shape}")
     
@@ -230,8 +230,8 @@ if __name__ == "__main__":
     print(f"   Cell state shape: {hidden[1].shape}")
     
     # 예측값 확인
-    print(f"\n🎯 예측값 샘플 (정규화된 값):")
+    print(f"\n예측값 샘플 (정규화된 값):")
     print(f"   {output[:5].squeeze().detach().numpy()}")
     
-    print(f"\n✅ 모델 테스트 완료!")
+    print(f"\n모델 테스트 완료!")
     print("="*60)
